@@ -55,6 +55,7 @@ This allows engineers to:
 
 ## System Architecture
 
+```
 Event Log (JSON)
       ↓
 Parser Layer
@@ -66,3 +67,4 @@ State Tracker
 Failure Detection Module
       ↓
 Timeline Visualization (Flask UI)
+```

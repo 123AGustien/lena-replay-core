@@ -1,0 +1,7 @@
+[
+  {"t": 1, "component": "BATTERY", "state": "OK"},
+  {"t": 2, "component": "BATTERY", "state": "VOLTAGE_DROP"},
+  {"t": 3, "component": "ECU", "state": "NORMAL"},
+  {"t": 4, "component": "THERMAL", "state": "OVERHEAT_WARNING"},
+  {"t": 5, "component": "ECU", "state": "FAIL_SAFE_TRIGGERED"}
+]

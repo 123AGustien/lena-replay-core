@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LENA Replay Timeline</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+
+        .event {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: #1e293b;
+        }
+
+        .failure {
+            background: #7f1d1d !important;
+            border-left: 5px solid red;
+        }
+
+        .ok {
+            border-left: 5px solid #22c55e;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="title">LENA Deterministic Replay Timeline</div>
+
+{% for h in history %}
+    <div class="event {% if failure_point and h.t == failure_point %}failure{% else %}ok{% endif %}">
+        <b>t={{h.t}}</b> |
+        {{h.component}} → {{h.state}} <br>
+        <small>System Snapshot: {{h.full_state}}</small>
+    </div>
+{% endfor %}
+
+</body>
+</html>

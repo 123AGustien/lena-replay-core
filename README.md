@@ -41,11 +41,12 @@ This allows engineers to:
 - Timeline-based visualization
 
 ---
-
-# Example Input
+## Example Input
 
 ```json
 { "t": 5, "component": "ECU", "state": "FAIL_SAFE_TRIGGERED" }
+```
+
 ## Output
 
 - Step-by-step system state evolution  

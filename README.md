@@ -1,32 +1,48 @@
 # LENA Replay Core
 
-Deterministic failure reconstruction and event replay engine for EV and complex system diagnostics.
+## Deterministic Failure Reconstruction Engine for EV Systems
+
+LENA Replay Core is a deterministic event replay engine designed to reconstruct system failures in complex, distributed automotive architectures.
+
+It transforms raw event logs into reproducible system state timelines, enabling engineers to trace failure causality across ECUs, sensors, and subsystems.
 
 ---
 
-## What this does
+## Problem
 
-LENA reconstructs system failures from event logs in a deterministic way so engineers can:
+Modern EV systems generate fragmented telemetry across multiple ECUs and subsystems. When failures occur:
 
-- Replay failures exactly as they happened  
-- Identify root cause steps  
-- Visualize system state transitions  
-- Debug intermittent EV/system issues  
-
----
-
-## Core idea
-
-Same input event log → same system replay every time.
+- Logs are asynchronous
+- Root cause chains are unclear
+- Failures are non-reproducible
 
 ---
 
-## Example use case
+## Solution
 
-EV battery + ECU failure cascade reconstruction from telemetry/event logs.
+LENA introduces deterministic replay:
+
+> Same event log → identical system state reconstruction every time
+
+This allows engineers to:
+
+- Reconstruct failure sequences
+- Identify trigger points
+- Trace propagation across components
+- Validate system behavior post-failure
 
 ---
 
-## Status
+## Core Capability
 
-MVP prototype (early stage)
+- JSON event ingestion
+- Deterministic state transition engine
+- Failure trigger detection
+- Timeline-based visualization
+
+---
+
+## Example Input
+
+```json
+{ "t": 5, "component": "ECU", "state": "FAIL_SAFE_TRIGGERED" }

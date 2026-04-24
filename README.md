@@ -52,3 +52,17 @@ This allows engineers to:
 - Step-by-step system state evolution  
 - Highlighted failure timestamp  
 - Full system state snapshot at each step
+
+## System Architecture
+
+Event Log (JSON)
+      ↓
+Parser Layer
+      ↓
+Deterministic Replay Engine
+      ↓
+State Tracker
+      ↓
+Failure Detection Module
+      ↓
+Timeline Visualization (Flask UI)

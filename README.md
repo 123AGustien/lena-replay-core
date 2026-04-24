@@ -68,3 +68,10 @@ Failure Detection Module
       ↓
 Timeline Visualization (Flask UI)
 ```
+## Why LENA Matters
+
+In modern EV architectures, failures are distributed across multiple subsystems and are often non-reproducible due to asynchronous telemetry logs.
+
+LENA enables deterministic reconstruction of system behavior, allowing engineers to move from:
+
+"what happened?" → "exactly how it happened"

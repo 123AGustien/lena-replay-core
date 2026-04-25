@@ -22,6 +22,7 @@ def propagate_failure(node, log):
         propagate_failure(d, log)
 
 def run_simulation():
+    # Build graph
     A = Node("A")
     B = Node("B")
     C = Node("C")
@@ -31,12 +32,13 @@ def run_simulation():
     B.add(C)
     C.add(D)
 
+    # Run simulation
     log = []
 
     A.state = "FAIL"
+    propagate_failure(A, log)
 
-propagate_failure(A, log)
-
+    # Output generation (CI artifact)
     output = {
         "log": log,
         "replay_test": True
@@ -47,6 +49,7 @@ propagate_failure(A, log)
 
     print("OUTPUT WRITTEN: result.json")
 
+    # Hard validation (CI safety gate)
     assert os.path.exists("result.json")
 
 if __name__ == "__main__":

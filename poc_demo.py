@@ -34,7 +34,8 @@ def run_simulation():
     log = []
 
     A.state = "FAIL"
-    propagate_failure(A, log)
+
+propagate_failure(A, log)
 
     output = {
         "log": log,

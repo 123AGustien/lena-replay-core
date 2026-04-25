@@ -1,5 +1,10 @@
 # LENA Replay Core – Automotive Deterministic Failure Reconstruction Engine
 
+
+## 🚀 Live Demo
+
+[![Run Demo](https://img.shields.io/badge/Run%20Demo-GitHub%20Actions-blue?style=for-the-badge)](https://github.com/123AGustien/lena-replay-core/actions/workflows/poc-run.yml)
+
 ## Overview
 
 LENA Replay Core is a deterministic event replay system designed for automotive diagnostics and ECU failure reconstruction.

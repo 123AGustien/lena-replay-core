@@ -8,20 +8,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      # 3. Run simulation
       - name: Run POC simulation
         run: python poc_demo.py
 
-      - name: Verify output
-        run: ls -la
+      # 4. Safety gate (CRITICAL)
+      - name: Validate output file
+        run: |
+          if [ ! -f result.json ]; then
+            echo "❌ result.json missing - simulation failed"
+            exit 1
+          fi
 
+      # 5. Debug visibility
+      - name: Debug file tree
+        run: ls -R
+
+      # 6. Upload artifact
       - name: Upload result artifact
         uses: actions/upload-artifact@v4
         with:

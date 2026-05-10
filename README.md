@@ -1,3 +1,51 @@
+
+## 🧊 System Freeze (v1.0)
+
+LENA Replay Core operates under a **frozen deterministic baseline (v1.0)**.
+
+This ensures:
+
+- Deterministic event replay is locked
+- Failure reconstruction is fully reproducible
+- Timeline reconstruction is stable and consistent
+- Identical input logs always produce identical system state outputs
+
+---
+
+## 🔒 Frozen Components
+
+The following subsystems are frozen in v1.0:
+
+- Event log parser
+- Deterministic replay engine
+- State tracking system
+- Failure propagation reconstruction logic
+- Timeline reconstruction pipeline
+
+---
+
+## 🌿 Evolution Rule
+
+- `v1.0` → immutable deterministic replay baseline
+- `develop` → experimental replay enhancements
+- `v1.1+` → validated system improvements
+
+---
+
+## 🧠 System Boundary
+
+This system is strictly defined as a:
+
+**deterministic failure reconstruction and analysis engine**
+
+It is used for:
+- Debugging system failures
+- Reconstructing event causality
+- Replaying distributed system states
+
+It is **not a live control system**.
+
+
 # LENA Replay Core – Automotive Deterministic Failure Reconstruction Engine
 
 
